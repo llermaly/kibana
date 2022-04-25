@@ -27,7 +27,14 @@ export function getServices(core: CoreStart): Services {
     addSuccessToast: (message: string) => core.notifications.toasts.addSuccess(message),
     fetchRandomNumber: async () => {
       try {
-        const response = await core.http.fetch<{ randomNumber: number }>(RANDOM_NUMBER_ROUTE_PATH);
+        //const response = await core.http.fetch<{ randomNumber: number }>(RANDOM_NUMBER_ROUTE_PATH);
+        const response = await core.http.fetch('/internal/security/me');
+        console.log("RESPONSE FROM USER DATA");
+        console.log(response);
+        const externalRes = await fetch('https://random-data-api.com/api/stripe/random_stripe');
+        const data = await externalRes.json();
+        console.log('externalRes service on localhost:6969');
+        console.log(data)
         return response.randomNumber;
       } catch (e) {
         return e;

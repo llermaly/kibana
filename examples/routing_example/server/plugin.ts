@@ -13,7 +13,7 @@ export class RoutingExamplePlugin implements Plugin<{}, {}> {
   public setup(core: CoreSetup) {
     const router = core.http.createRouter();
 
-    registerRoutes(router);
+    registerRoutes(router)
 
     return {};
   }

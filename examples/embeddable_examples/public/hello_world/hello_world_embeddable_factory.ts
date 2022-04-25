@@ -25,7 +25,7 @@ export class HelloWorldEmbeddableFactoryDefinition implements EmbeddableFactoryD
    * the right permissions.
    */
   public async isEditable() {
-    return true;
+    return false;
   }
 
   public async create(initialInput: EmbeddableInput, parent?: IContainer) {

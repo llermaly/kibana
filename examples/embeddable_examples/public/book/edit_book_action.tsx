@@ -42,7 +42,7 @@ export const ACTION_EDIT_BOOK = 'ACTION_EDIT_BOOK';
 export const createEditBookAction = (getStartServices: () => Promise<StartServices>) =>
   createAction({
     getDisplayName: () =>
-      i18n.translate('embeddableExamples.book.edit', { defaultMessage: 'Edit Book' }),
+      i18n.translate('embeddableExamples.book.edit', { defaultMessage: 'Edit Button' }),
     id: ACTION_EDIT_BOOK,
     type: ACTION_EDIT_BOOK,
     order: 100,

@@ -34,7 +34,7 @@ export class HelloWorldEmbeddable extends Embeddable {
    */
   public render(node: HTMLElement) {
     node.innerHTML =
-      '<div data-test-subj="helloWorldEmbeddable" data-render-complete="true">HELLO WORLD!</div>';
+      '<div style="width: 100%; background-color: #f6f8fb;" ><button onClick={alert("asdas")} data-test-subj="helloWorldEmbeddable" class="euiButton euiButton--primary euiButton--fill solutionToolbarButton solutionToolbar__primaryButton solutionToolbar__primaryButton--light" data-render-complete="true">CALL CIITIZEN API</button></div>';
   }
 
   /**
